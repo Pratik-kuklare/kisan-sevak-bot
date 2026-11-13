@@ -33,4 +33,10 @@ app.post('/webhook', async (req, res) => {
     res.sendStatus(200);
 });
 
+app.get('/privacy', (req, res) => {
+  res.send(`<h1>Kisan Sevak Privacy Policy</h1>
+  <p>Kisan Sevak collects farmer messages only to provide agricultural advisory services. 
+  We do not share any personal data with third parties.</p>
+  <p>Contact: pratikkuklare1903@gmail.com</p>`);
+});
 app.listen(process.env.PORT || 3000, () => console.log('Kisan Sevak Bot running!'));
